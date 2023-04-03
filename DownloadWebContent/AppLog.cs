@@ -28,9 +28,9 @@ namespace DownloadWebContent
                 if (!Directory.Exists(sStrLogDirPath))
                     Directory.CreateDirectory(sStrLogDirPath);
 
-                StreamWriter writer = File.AppendText(sStrLogDirPath + @"\Log-" + DateTime.Now.ToString("yyyy-MM") + ".txt");
-                writer.WriteLine(sLogContent);
-                writer.Close();
+                StreamWriter sStreamWriter = File.AppendText(sStrLogDirPath + @"\Log-" + DateTime.Now.ToString("yyyy-MM") + ".txt");
+                sStreamWriter.WriteLine(sLogContent);
+                sStreamWriter.Close();
 
                 Console.WriteLine(sLogContent);
             }
